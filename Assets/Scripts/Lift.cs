@@ -7,6 +7,9 @@ public class Lift : MonoBehaviour
     public GameObject Player;
     public GameObject Bottom;
     public GameObject Top;
+    public AudioClip Movement;
+    public AudioClip Button;
+    public AudioSource audioS;
     public int LiftSpeed = 0;
 
     void Update()
@@ -20,29 +23,36 @@ public class Lift : MonoBehaviour
         if (Up < 0.1f)
         {
             LiftSpeed = 0;
+            audioS.Stop();
         }
 
         if (Down < 0.1f)
         {
             LiftSpeed = 0;
+            audioS.Stop();
         }
 
         if (PlayerDis < 2)
         {
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (Input.GetKeyDown(KeyCode.Mouse2))
             {
                 if(Up < 0.3f)
                 {
                     transform.position += new Vector3(0, -.2f, 0);
                     LiftSpeed = -1;
+                    audioS.PlayOneShot(Button);
+                    audioS.PlayOneShot(Movement);
                 }
 
                 if(Down < 0.3f)
                 {
                     transform.position += new Vector3(0, .2f, 0);
                     LiftSpeed = 1;
+                    audioS.PlayOneShot(Button);
+                    audioS.PlayOneShot(Movement);
                 }
             }
         }
+      
     }
 }
