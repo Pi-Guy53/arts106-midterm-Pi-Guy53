@@ -9,7 +9,9 @@ public class Lift : MonoBehaviour
     public GameObject Top;
     public AudioClip Movement;
     public AudioClip Button;
+    public AudioClip Ambience;
     public AudioSource audioS;
+    public AudioSource audioS2;
     public int LiftSpeed = 0;
 
     void Update()
@@ -42,6 +44,7 @@ public class Lift : MonoBehaviour
                     LiftSpeed = -1;
                     audioS.PlayOneShot(Button);
                     audioS.PlayOneShot(Movement);
+                    audioS2.PlayOneShot(Ambience);
                 }
 
                 if(Down < 0.3f)
