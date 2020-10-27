@@ -26,12 +26,14 @@ public class Lift : MonoBehaviour
         {
             LiftSpeed = 0;
             audioS.Stop();
+            audioS2.Stop();
         }
 
         if (Down < 0.1f)
         {
             LiftSpeed = 0;
             audioS.Stop();
+            audioS2.Stop();
         }
 
         if (PlayerDis < 2)
@@ -53,6 +55,7 @@ public class Lift : MonoBehaviour
                     LiftSpeed = 1;
                     audioS.PlayOneShot(Button);
                     audioS.PlayOneShot(Movement);
+                    audioS2.PlayOneShot(Ambience);
                 }
             }
         }

@@ -6,6 +6,7 @@ public class Camera_Pan : MonoBehaviour
 {
     public GameObject FPS;
     public GameObject PanCamera;
+    public GameObject Canvas;
     private bool Panned = false;
 
 
@@ -20,6 +21,7 @@ public class Camera_Pan : MonoBehaviour
         {
             FPS.SetActive(false);
             PanCamera.SetActive(true);
+            Canvas.SetActive(false);
             Invoke("EndAnim", 3.5f);
             Panned = true;
 
@@ -30,5 +32,6 @@ public class Camera_Pan : MonoBehaviour
     {
         FPS.SetActive(true);
         PanCamera.SetActive(false);
+        Canvas.SetActive(true);
     }
 }

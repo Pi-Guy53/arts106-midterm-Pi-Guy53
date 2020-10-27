@@ -40,10 +40,12 @@ public class Airlock_Outer : MonoBehaviour
     void IsOpening()
     {
         DoorObject.transform.position += new Vector3(xAxis, yAxis, zAxis);
+        audioS.PlayOneShot(Opening);
     }
 
     void IsClosing()
     {
         DoorObject.transform.position -= new Vector3(xAxis, yAxis, zAxis);
+        audioS.PlayOneShot(Opening);
     }
 }
