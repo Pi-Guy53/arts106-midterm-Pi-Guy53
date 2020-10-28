@@ -16,13 +16,13 @@ public class Drill_Movement : MonoBehaviour
         if (Drill == true)
         {
             transform.position += new Vector3(0, -.01f, 0);
-            Gears.transform.Rotate(0, 0, -.25f);
+            Gears.transform.Rotate(0, 0, -.5f);
         }
 
         if(Drill == false)
         {
             transform.position += new Vector3(0, .01f, 0);
-            Gears.transform.Rotate(0, 0, .25f);
+            Gears.transform.Rotate(0, 0, .5f);
         }
 
         if (DisToBottom < 1)
