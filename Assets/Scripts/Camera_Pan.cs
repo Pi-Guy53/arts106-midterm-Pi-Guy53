@@ -24,7 +24,6 @@ public class Camera_Pan : MonoBehaviour
             Canvas.SetActive(false);
             Invoke("EndAnim", 3.5f);
             Panned = true;
-
         }
     }
 

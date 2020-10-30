@@ -38,7 +38,7 @@ public class Lift : MonoBehaviour
 
         if (PlayerDis < 2)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse2))
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 if(Up < 0.3f)
                 {
