@@ -13,7 +13,7 @@ public class ride_in_car : MonoBehaviour
 
     private void OnTriggerStay(Collider Player)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(name: "e"))
         {
             Drive_Train.SetActive(true);
             Video.SetActive(true);
@@ -23,7 +23,7 @@ public class ride_in_car : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKey(name: "q"))
         {
             Drive_Train.SetActive(false);
             Video.SetActive(false);

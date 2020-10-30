@@ -14,6 +14,7 @@ public class FPS_Shooter : MonoBehaviour
     public float RateOfFire = 0.15f;
     public GameObject bullet;
     public Transform shootFrom;
+    //public int RandomAim = 0; WIP
     public GameObject flash;
     public GameObject barrel;
     public float ScopeZoom = 120f;
@@ -61,7 +62,7 @@ public class FPS_Shooter : MonoBehaviour
         {
             if (ammo > 0)
             {
-                ShootProjectile();
+            ShootProjectile();
             }
         }
 
@@ -79,12 +80,17 @@ public class FPS_Shooter : MonoBehaviour
         }
     }
 
-    void ShootProjectile()
+        void ShootProjectile()
     {
         if (CoolDown == false)
         {
+            //int RandomX = Random.Range(RandomAim * -1, RandomAim);
+            //int RandomY = Random.Range(RandomAim * -1, RandomAim);
+            //int RandomZ = Random.Range(RandomAim * -1, RandomAim);
+           //shootFrom.transform.Rotate(RandomX, RandomY, RandomZ);
             GameObject thisBullet = Instantiate(bullet, shootFrom.transform.position, shootFrom.transform.rotation);
             thisBullet.GetComponent<Rigidbody>().AddForce(shootFrom.forward * shootForce, ForceMode.Impulse);
+            //shootFrom.transform.Rotate(-RandomX, -RandomY, -RandomZ);
             audioS.PlayOneShot(FireSound);
             Muzzel_Flash();
             ammo--;
