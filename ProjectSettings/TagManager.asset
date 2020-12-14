@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Faction2
+  - Faction1
+  - Enemy_Bullet
+  - ShellF1
+  - ShellF2
+  - Shell
   layers:
   - Default
   - TransparentFX
